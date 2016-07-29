@@ -1,3 +1,3 @@
 #!/bin/bash
-chmod +x LSB-Flask.py
+chmod +x app.py
 flask run
