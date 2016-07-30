@@ -100,9 +100,13 @@ def steg_in(cover_image, message_image):
 	final.putdata(combined)
 	#final.show()
 
+	final.save('/tmp/final.png')
+
 	return final
 
-def steg_out(image):
+def steg_out(cover_image):
+	image = Image.open(cover_image).convert("RGB")
+
 	# split input into color bands
 	cover_r, cover_g, cover_b = image.split()
 
@@ -133,5 +137,7 @@ def steg_out(image):
 	final_hidden = Image.new("RGB", (hidden_width, hidden_height))
 	final_hidden.putdata(combined_hidden)
 	#final_hidden.show()
+
+	final_hidden.save('/tmp/hidden_message.png')
 
 	return final_hidden

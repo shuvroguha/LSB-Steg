@@ -1,9 +1,24 @@
 {% extends "layout.html" %}
 
+{% block title%}<title>Encode</title>{% endblock title %}
 
-<title>Encode</title>
+{% block content %}
+
 <h1>Upload a cover image</h1>
-<form action="" method="post" enctype="multipart/form-data">
-  <input type=file name=file />
-  <input type="submit" value="Upload" />
+<form action="" method=post enctype=multipart/form-data>
+  <input type=file name=cover />
+  <input class="btn btn-default" type="submit" value="Upload" />
 </form>
+
+<h1>Upload an image to hide</h1>
+<form action="" method=post enctype=multipart/form-data>
+  <input type=file name=message />
+  <input class="btn btn-default" type="submit" value="Upload" />
+</form>
+
+<form action="" method="post">
+  <input class="btn btn-default" type="submit" name="begin" value="Start Encoding!" />
+</form>
+
+
+{% endblock content %}

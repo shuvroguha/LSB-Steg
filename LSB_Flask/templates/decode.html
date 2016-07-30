@@ -1,4 +1,17 @@
 {% extends "layout.html" %}
-{% block body %}
 
-{% endblock %}
+{% block title%}<title>Decode</title>{% endblock title %}
+
+{% block content %}
+
+<h1>Upload an image to decode</h1>
+<form action="" method="post" enctype="multipart/form-data">
+  <input type=file name=cover />
+  <input class="btn btn-default" type="submit" value="Upload" />
+</form>
+
+<form action="" method="post">
+  <input class="btn btn-default" type="submit" name="begin" value="Start Decoding!" />
+</form>
+
+{% endblock content %}

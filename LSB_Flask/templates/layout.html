@@ -11,8 +11,8 @@
 
 <body class = "body">
   <div id="content">
-    <a class="btn btn-default" href="{{ url_for('decode') }}">Decode</a>
     <a class="btn btn-default" href="{{ url_for('encode') }}">Encode</a>
+    <a class="btn btn-default" href="{{ url_for('decode') }}">Decode</a>
     {% block content %}{% endblock %}
   </div>
   <div id="footer">
